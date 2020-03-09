@@ -1,0 +1,1 @@
+select Eve.eid, date from schedule Sch, event Eve where type = 'music' and Eve.eid = Sch.eid and Eve.eid in (select Par1.eid from participate Par1, participate Par2 where Par1.eid = Par2.eid and Par1.pid = 12345678 and not Par2.pid = 12345679) order by eid desc, date asc;

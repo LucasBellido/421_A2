@@ -1,0 +1,1 @@
+select Ven.vid from venue Ven where area ='A' and not exists (select * from schedule Sch where Sch.date = '2020-01-17' and Ven.vid = Sch.vid) order by vid asc;

@@ -1,0 +1,1 @@
+select eid, numpeople from (select Par1.eid, count(Par1.pid) as numpeople from participate Par1, event Eve where Par1.eid = Eve.eid group by Par1.eid) temp where numpeople >= (select max(numpeople) from (select Par1.eid, count(Par1.pid) as numpeople from participate Par1, event Eve where Par1.eid = Eve.eid group by Par1.eid) temp1) order by eid;

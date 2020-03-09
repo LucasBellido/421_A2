@@ -1,0 +1,1 @@
+select pid, pname from person where pid in (select distinct Par2.pid from participate Par1, participate Par2 where Par1.eid = Par2.eid and Par1.pid = 12345678) order by pid;

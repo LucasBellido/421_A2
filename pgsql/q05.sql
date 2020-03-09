@@ -1,0 +1,1 @@
+select Per.pid, pname from person Per, participate Par1 where Per.pid = Par1.pid and eid = 5 order by pid;

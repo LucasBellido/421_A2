@@ -1,0 +1,1 @@
+select Ven.vid, (select count(eid) from schedule Sch where Sch.vid = Ven.vid) as numevents from venue Ven order by Ven.vid;

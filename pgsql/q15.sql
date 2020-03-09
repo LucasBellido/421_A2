@@ -1,0 +1,1 @@
+select o.oid, o.oname from organization o, host h where o.oid=h.oid and h.eid in (select s.eid from schedule s group by s.eid having count(1)>2) order by o.oid;

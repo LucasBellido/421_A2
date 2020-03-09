@@ -1,0 +1,1 @@
+select Ven.vid, COALESCE(Count(Sch.eid), 0) as numpeople from venue Ven left outer join schedule Sch on Ven.vid = Sch.vid group by Ven.vid order by Ven.vid;

@@ -1,0 +1,1 @@
+select oid from host, schedule Sch, venue Ven where area = 'C' and host.eid = Sch.eid and Ven.vid = Sch.vid group by oid having count(distinct Sch.vid) = (select count(vid) from venue where area = 'C') order by oid;

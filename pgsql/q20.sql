@@ -1,0 +1,1 @@
+select Eve.type, avg(Cal.price) as averageamount from event Eve, schedule Sch, calendar Cal where Sch.vid=Cal.vid and Eve.eid= Sch.eid and Sch.date=Cal.date group by Eve.type order by Eve.type;

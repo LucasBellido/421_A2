@@ -1,0 +1,1 @@
+select eid, SUM(price) as totalamount from schedule Sch, calendar Cal where Sch.vid = Cal.vid and Sch.date = Cal.date group by eid order by eid desc;

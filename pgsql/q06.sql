@@ -1,0 +1,1 @@
+select distinct Org.oid, oname from organization Org, host, schedule Sch where Org.oid = host.oid and host.eid = Sch.eid and Sch.date = '2020-01-16' order by Org.oid;

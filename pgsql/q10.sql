@@ -1,0 +1,1 @@
+select distinct Ven.vid, area, capacity from venue Ven, schedule Sch where Ven.vid = Sch.vid and exists (select eid from host where host.eid = Sch.eid and host.oid = 6) order by vid, capacity;
